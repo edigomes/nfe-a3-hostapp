@@ -1,0 +1,12 @@
+{
+  "name": "com.aconos.erp",
+  "description": "Interface A3",
+  "path": "run.bat",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://bmfbcejdknlknpncfpeloejonjoledha/"
+  ],
+  "permissions": [
+    "tabs", "http://*/*"
+  ]
+}

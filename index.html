@@ -1,0 +1,29 @@
+<html>
+    <body>
+
+    <script>
+    
+    enviaMensagem = function() {
+        window.postMessage({
+            type: "FROM_PAGE",
+            text: "Hello from the webpage!",
+            msg: {ping: 'pong'} 
+        }, "*");
+    };
+    
+    
+    window.addEventListener("message", function(event) {
+        // Recebe do plugin
+        if (event.source !== window)
+                return;
+        if (event.data.type && (event.data.type === "TO_PAGE")) {
+            console.log("Page script received: ");
+            console.log(event.data.text);
+        }
+    }, false);
+    
+    </script>
+
+    <modal></modal>
+</body>
+</html>
